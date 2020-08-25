@@ -1,6 +1,6 @@
 # Github Manager Explore
 
-> This is a github project manager / browser, in it, I make use of the github v4 API "graphql" in which, to use it, a personal access token is required ["tutorial for creation"](https://www.google.com), in which it is stored in a cookie.  
+> This is a github project manager / browser, in it, I make use of the github v4 API "graphql" in which, to use it, a personal access token is required ["tutorial for creation"](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token), in which it is stored in a cookie.  
 
 ## About Project
 
