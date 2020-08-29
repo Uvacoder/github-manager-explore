@@ -1,3 +1,6 @@
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
+
 # Github Manager Explore
 
 > This is a github project manager / browser, in it, I make use of the github v4 API "graphql" in which, to use it, a personal access token is required ["tutorial for creation"](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token), in which it is stored in a cookie.  
