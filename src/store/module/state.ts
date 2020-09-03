@@ -1,8 +1,8 @@
-import { User } from '../../plugins/types/interfaces'
+import { Profile } from '../../plugins/types/interfaces'
 
 export interface StateInterface {
   url: string
-  user: User
+  profile: Profile
   graph: any
   confirm: null
   notify: null
@@ -10,7 +10,7 @@ export interface StateInterface {
 
 const state: StateInterface = {
   url: 'https://api.github.com/graphql',
-  user: {},
+  profile: {},
   graph: null,
   confirm: null,
   notify: null

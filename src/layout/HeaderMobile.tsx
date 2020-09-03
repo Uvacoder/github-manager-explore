@@ -11,13 +11,14 @@ export const HeaderMobile = defineComponent({
       default: false
     }
   },
-  setup(p, { emit }) {
+  setup(p, { emit, root }) {
     function update(status: boolean) {
       emit('update', status)
     }
 
     function logout() {
       emit('logout')
+      root.$store.dispatch('setProfile', {})
     }
 
     const menu = computed({
@@ -32,15 +33,35 @@ export const HeaderMobile = defineComponent({
     return () => {
       return (
         <v-app-bar
-          attrs={{ dark: true, app: true, 'clipped-left': true }}
+          attrs={{
+            absolute: true,
+            dark: true,
+            app: true,
+            'clipped-left': true
+          }}
           color={'primary'}
         >
           <v-app-bar-nav-icon
             onClick={() => {
               menu.value = !menu.value
             }}
-          ></v-app-bar-nav-icon>
+          />
           <v-toolbar-title>{p.headertitle}</v-toolbar-title>
+          <v-spacer></v-spacer>
+          {root.cProfile !== null ? (
+            <v-btn
+              icon
+              onClick={() => {
+                logout()
+              }}
+            >
+              <v-icon>fas fa-sign-out-alt</v-icon>
+            </v-btn>
+          ) : (
+            <v-btn icon to={'/login'}>
+              <v-icon>fas fa-sign-in-alt</v-icon>
+            </v-btn>
+          )}
         </v-app-bar>
       )
     }

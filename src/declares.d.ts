@@ -1,4 +1,5 @@
 import { Moment } from 'moment'
+import { Profile } from './plugins/types/interfaces'
 
 declare module 'vue/types/vue' {
   interface Vue {
@@ -28,5 +29,7 @@ declare module 'vue/types/vue' {
       subtitle?: string | undefined,
       color?: string | undefined
     ): Promise<unknown>
+
+    cProfile: Profile
   }
 }

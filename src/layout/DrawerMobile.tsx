@@ -11,7 +11,7 @@ export const DrawerMobile = defineComponent({
       default: false
     }
   },
-  setup(p, { emit }) {
+  setup(p, { emit, root }) {
     function update(status: boolean) {
       emit('update', status)
     }
@@ -33,20 +33,31 @@ export const DrawerMobile = defineComponent({
           attrs={{ dark: true, app: true, clipped: true }}
         >
           <v-list dense>
+            <v-list-item>
+              <v-list-item-avatar>
+                <img src={root.cProfile.avatarUrl} />
+              </v-list-item-avatar>
+
+              <v-list-item-content>
+                <v-list-item-title>{root.cProfile.name}</v-list-item-title>
+                <v-list-item-subtitle>
+                  {root.cProfile.status?.message}
+                </v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+
+            <v-divider></v-divider>
+
             <v-list-item link>
               <v-list-item-action>
                 <v-icon>mdi-home</v-icon>
               </v-list-item-action>
-              <v-list-item-content>
+              <v-list-item-content
+                onClick={() => {
+                  console.log('teste')
+                }}
+              >
                 <v-list-item-title>Dashboard</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-            <v-list-item link>
-              <v-list-item-action>
-                <v-icon>mdi-cog</v-icon>
-              </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title>Settings</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </v-list>
