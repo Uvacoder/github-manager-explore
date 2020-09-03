@@ -7,6 +7,9 @@ export default Vue.extend({
     },
     confirm() {
       return this.$store.getters.getConfirm
+    },
+    cProfile() {
+      return this.$store.getters.getProfile
     }
   }
 })
