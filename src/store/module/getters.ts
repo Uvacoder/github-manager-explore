@@ -3,6 +3,7 @@ import { StoreInterface } from '../index'
 import { StateInterface } from './state'
 
 const getters: GetterTree<StateInterface, StoreInterface> = {
+  getProfile: (state) => state.profile,
   getUrl: (state) => state.url,
   getConfirm: (state) => state.confirm,
   getGraph: (state) => state.graph,

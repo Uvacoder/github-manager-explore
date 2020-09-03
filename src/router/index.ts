@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import { Home } from '../views/Home'
 import { Login } from '../views/Login'
+import { Profile } from '../plugins/types/interfaces'
 
 Vue.use(VueRouter)
 
@@ -13,12 +14,19 @@ const routes: Array<RouteConfig> = [
   {
     path: '/home',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      requerAuth: true,
+      title: 'Home Page'
+    }
   },
   {
     path: '/login',
     name: 'Login',
-    component: Login
+    component: Login,
+    meta: {
+      title: 'Login'
+    }
   }
 ]
 
@@ -26,6 +34,28 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  const authorization = to.matched.some((record) => record.meta.requerAuth)
+  const profile: Profile = window.$cookies.get('profile')
+
+  console.log(profile)
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
+
+  if (authorization) {
+    if (profile !== undefined && profile !== null) {
+      next()
+    } else {
+      next({
+        path: '/login'
+      })
+    }
+  } else {
+    next()
+  }
 })
 
 export default router
