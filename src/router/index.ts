@@ -40,13 +40,12 @@ router.beforeEach((to, from, next) => {
   const authorization = to.matched.some((record) => record.meta.requerAuth)
   const profile: Profile = window.$cookies.get('profile')
 
-  console.log(profile)
   if (to.meta.title) {
     document.title = to.meta.title
   }
 
   if (authorization) {
-    if (profile !== undefined && profile !== null) {
+    if (profile !== null) {
       next()
     } else {
       next({

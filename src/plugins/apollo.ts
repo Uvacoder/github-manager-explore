@@ -9,7 +9,6 @@ export function setupApollo(url: string) {
 
   const authLink = setContext((_, { headers }) => {
     const token = window.$cookies.get('token')
-    console.log(token)
     return {
       headers: {
         ...headers,

@@ -26,10 +26,16 @@ export const App = defineComponent({
     })
 
     onMounted(() => {
+      root.$store.dispatch('boot')
       root.$store.dispatch('setNotify', notifyRef.value.show)
       root.$store.dispatch('setConfirmDialog', confirmRef.value.confirm)
-      root.$store.dispatch('boot')
     })
+
+    function logout() {
+      root.$cookies.remove('profile', '/')
+      root.$store.dispatch('boot')
+      root.$router.push('/login')
+    }
 
     const layoutMobile = () => {
       return (
@@ -38,7 +44,7 @@ export const App = defineComponent({
             headertitle={state.title}
             left={state.left}
             onLogout={() => {
-              //
+              logout()
             }}
             onUpdate={(e: any) => {
               state.left = e
