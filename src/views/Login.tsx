@@ -1,4 +1,4 @@
-import { defineComponent, reactive, ref } from '@vue/composition-api'
+import { defineComponent, reactive, ref, onMounted } from '@vue/composition-api'
 import { useQuery } from '@vue/apollo-composable'
 import gql from 'graphql-tag'
 
@@ -8,7 +8,13 @@ export const Login = defineComponent({
       token: ''
     })
 
-    const enabled = ref(false)
+    onMounted(() => {
+      root.$nextTick(() => {
+        if (root.cProfile.login !== undefined) {
+          root.$router.push('/')
+        }
+      })
+    })
 
     // result, loading, error, refetch
     const viewBio = useQuery(
@@ -24,23 +30,20 @@ export const Login = defineComponent({
             }
           }
         }
-      `,
-      {},
-      () => ({
-        enabled: enabled.value
-      })
+      `
     )
 
     async function login() {
       root.$cookies.set('token', state.token, '7d', '/')
-      enabled.value = true
 
       try {
         const { data } = await viewBio.refetch()
+
         root.$cookies.set('profile', data.viewer, '7d', '/')
         root.$store.dispatch('boot')
         root.$router.push('/')
       } catch (error) {
+        console.log(error)
         root.notify('Error: Invalid Token', 'red', 8)
       }
     }
