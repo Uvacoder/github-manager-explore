@@ -18,7 +18,6 @@ export const HeaderMobile = defineComponent({
 
     function logout() {
       emit('logout')
-      root.$store.dispatch('setProfile', {})
     }
 
     const menu = computed({
@@ -48,7 +47,7 @@ export const HeaderMobile = defineComponent({
           />
           <v-toolbar-title>{p.headertitle}</v-toolbar-title>
           <v-spacer></v-spacer>
-          {root.cProfile !== null ? (
+          {root.cProfile.login !== undefined ? (
             <v-btn
               icon
               onClick={() => {

@@ -7,7 +7,6 @@ export const Home = defineComponent({
     return () => {
       return (
         <div class={'ma-2'}>
-          {root.cProfile.login}
           <v-btn attrs={{ small: true }}>
             <span>Normal</span>
           </v-btn>

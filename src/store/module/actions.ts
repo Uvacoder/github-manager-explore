@@ -5,9 +5,15 @@ import { Profile } from '@/src/plugins/types/interfaces'
 
 const actions: ActionTree<StateInterface, StoreInterface> = {
   async boot({ commit }) {
-    const cookies = window.$cookies // otherwise we're on client
+    const cookies = window.$cookies
     const profile: Profile = cookies.get('profile')
-    commit('setProfile', profile)
+
+    if (profile !== null && profile !== undefined) {
+      commit('setProfile', profile)
+    } else {
+      cookies.remove('token', '/')
+      commit('setProfile', {})
+    }
   },
   setProfile({ commit }, payload) {
     commit('setProfile', payload)
