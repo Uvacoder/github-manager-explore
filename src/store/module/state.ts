@@ -6,6 +6,7 @@ export interface StateInterface {
   graph: any
   confirm: null
   notify: null
+  loading: any
 }
 
 const state: StateInterface = {
@@ -13,7 +14,8 @@ const state: StateInterface = {
   profile: {},
   graph: null,
   confirm: null,
-  notify: null
+  notify: null,
+  loading: null
 }
 
 export default state

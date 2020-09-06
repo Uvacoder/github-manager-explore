@@ -10,6 +10,9 @@ const mutation: MutationTree<StateInterface> = {
   },
   setConfirmDialog(state, payload) {
     state.confirm = payload
+  },
+  setLoading(state, payload) {
+    state.loading = payload
   }
 }
 

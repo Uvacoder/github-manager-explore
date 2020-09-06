@@ -12,12 +12,13 @@ declare module 'vue/types/vue' {
      * @memberof Vue
      */
     notify(message: string, color: string, time: number): void
-    $moment: Moment
-    ready: boolean
     /**
-     * Contrato Computed - (Contrato & ConfigContrato & PlanoVenda)
+     * Moment Lib
      *
+     * @type {Moment}
+     * @memberof Vue
      */
+    $moment: Moment
     /**
      * Show Dialog Confirmation
      * @param title Titulo (Questionario)
@@ -30,6 +31,34 @@ declare module 'vue/types/vue' {
       color?: string | undefined
     ): Promise<unknown>
 
+    /**
+     * Set Loading On/Off
+     *
+     * @type {{
+     *       on(): void
+     *       off(): void
+     *     }}
+     * @memberof Vue
+     */
+    cLoading: {
+      /**
+       * Enable Loading
+       *
+       */
+      on(): void
+      /**
+       * Disable Loading
+       *
+       */
+      off(): void
+    }
+
+    /**
+     * Profile Object
+     *
+     * @type {Profile}
+     * @memberof Vue
+     */
     cProfile: Profile
   }
 }

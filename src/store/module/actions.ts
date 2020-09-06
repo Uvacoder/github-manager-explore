@@ -23,6 +23,9 @@ const actions: ActionTree<StateInterface, StoreInterface> = {
   },
   setConfirmDialog({ commit }, payload) {
     commit('setConfirmDialog', payload)
+  },
+  setLoading({ commit }, payload) {
+    commit('setLoading', payload)
   }
 }
 

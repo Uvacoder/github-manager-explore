@@ -7,7 +7,8 @@ const getters: GetterTree<StateInterface, StoreInterface> = {
   getUrl: (state) => state.url,
   getConfirm: (state) => state.confirm,
   getGraph: (state) => state.graph,
-  getNotify: (state) => state.notify
+  getNotify: (state) => state.notify,
+  getLoading: (state) => state.loading
 }
 
 export default getters

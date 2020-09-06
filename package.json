@@ -24,6 +24,7 @@
     "apollo-link-context": "^1.0.20",
     "babel-plugin-vue-jsx-modifier": "^1.1.2",
     "core-js": "^3.6.5",
+    "epic-spinners": "^1.1.0",
     "graphql": "^15.3.0",
     "moment": "^2.27.0",
     "node-fetch": "^2.6.0",

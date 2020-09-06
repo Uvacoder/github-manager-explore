@@ -10,6 +10,9 @@ export default Vue.extend({
     },
     cProfile() {
       return this.$store.getters.getProfile
+    },
+    cLoading() {
+      return this.$store.getters.getLoading
     }
   }
 })

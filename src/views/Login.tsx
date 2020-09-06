@@ -16,7 +16,6 @@ export const Login = defineComponent({
       })
     })
 
-    // result, loading, error, refetch
     const viewBio = useQuery(
       gql`
         query {

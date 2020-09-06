@@ -12,6 +12,7 @@ export const App = defineComponent({
   setup(_, { root }) {
     const notifyRef = (ref(null) as unknown) as any
     const confirmRef = (ref(null) as unknown) as any
+    const loadingRef = (ref(null) as unknown) as any
     const apolloClient = setupApollo(root.$store.getters.getUrl)
     provide(DefaultApolloClient, apolloClient)
 
@@ -29,6 +30,11 @@ export const App = defineComponent({
       root.$store.dispatch('boot')
       root.$store.dispatch('setNotify', notifyRef.value.show)
       root.$store.dispatch('setConfirmDialog', confirmRef.value.confirm)
+      root.$store.dispatch('setLoading', {
+        on: loadingRef.value.on_,
+        off: loadingRef.value.off_
+      })
+
     })
 
     function logout() {
@@ -63,6 +69,8 @@ export const App = defineComponent({
     return () => {
       return (
         <v-app id={'app'}>
+          <loadingComponent ref={loadingRef} />
+
           {layoutMobile()}
           <v-main>
             <dialogConfirm ref={confirmRef} />
