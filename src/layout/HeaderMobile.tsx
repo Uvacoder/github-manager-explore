@@ -48,18 +48,41 @@ export const HeaderMobile = defineComponent({
           <v-toolbar-title>{p.headertitle}</v-toolbar-title>
           <v-spacer></v-spacer>
           {root.cProfile.login !== undefined ? (
-            <v-btn
-              icon
-              onClick={() => {
-                logout()
+            <v-tooltip
+              top
+              scopedSlots={{
+                activator: ({ on }) => {
+                  return (
+                    <v-btn
+                      {...{ on }}
+                      icon
+                      onClick={() => {
+                        logout()
+                      }}
+                    >
+                      <v-icon>fas fa-sign-out-alt</v-icon>
+                    </v-btn>
+                  )
+                }
               }}
             >
-              <v-icon>fas fa-sign-out-alt</v-icon>
-            </v-btn>
+              <span>Logout</span>
+            </v-tooltip>
           ) : (
-            <v-btn icon to={'/login'}>
-              <v-icon>fas fa-sign-in-alt</v-icon>
-            </v-btn>
+            <v-tooltip
+              top
+              scopedSlots={{
+                activator: ({ on }) => {
+                  return (
+                    <v-btn {...{ on }} icon to={'/login'}>
+                      <v-icon>fas fa-sign-in-alt</v-icon>
+                    </v-btn>
+                  )
+                }
+              }}
+            >
+              <span>Logout</span>
+            </v-tooltip>
           )}
         </v-app-bar>
       )
