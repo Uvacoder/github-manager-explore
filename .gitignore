@@ -7,6 +7,8 @@ selenium-debug.log
 chromedriver.log
 geckodriver.log
 
+yarn.lock
+
 
 # local env files
 .env.local
