@@ -70,16 +70,25 @@ export const DrawerMobile = defineComponent({
             )}
 
             {root.cProfile.login !== undefined ? (
-              <v-list-item link>
+              <v-list-item link to={'/home'}>
                 <v-list-item-action>
                   <v-icon>mdi-home</v-icon>
                 </v-list-item-action>
-                <v-list-item-content
-                  onClick={() => {
-                    root.$router.push('/home')
-                  }}
-                >
+                <v-list-item-content>
                   <v-list-item-title>Dashboard</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            ) : (
+              ''
+            )}
+
+            {root.cProfile.login !== undefined ? (
+              <v-list-item link to={'/vulnerabilityalerts'}>
+                <v-list-item-action>
+                  <v-icon>fas fa-shield-alt</v-icon>
+                </v-list-item-action>
+                <v-list-item-content>
+                  <v-list-item-title>Vulnerability Alerts</v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
             ) : (

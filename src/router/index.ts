@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import { Home } from '../views/Home'
 import { Login } from '../views/Login'
 import { Profile } from '../plugins/types/interfaces'
+import { VulnerabilityAlerts } from '../views/pages/VulnerabilityAlerts'
 
 Vue.use(VueRouter)
 
@@ -26,6 +27,15 @@ const routes: Array<RouteConfig> = [
     component: Login,
     meta: {
       title: 'Login'
+    }
+  },
+  {
+    path: '/vulnerabilityalerts',
+    name: 'Vulnerability Alerts',
+    component: VulnerabilityAlerts,
+    meta: {
+      requerAuth: true,
+      title: 'Vulnerability Alerts'
     }
   }
 ]

@@ -17,7 +17,6 @@ Vue.mixin(Mixin)
 moment.locale('pt-BR')
 Vue.prototype.$moment = moment
 
-
 new Vue({
   router,
   store,

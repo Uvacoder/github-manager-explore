@@ -34,7 +34,6 @@ export const App = defineComponent({
         on: loadingRef.value.on_,
         off: loadingRef.value.off_
       })
-
     })
 
     function logout() {
@@ -70,11 +69,11 @@ export const App = defineComponent({
       return (
         <v-app id={'app'}>
           <loadingComponent ref={loadingRef} />
+          <dialogConfirm ref={confirmRef} />
+          <notifyComponent ref={notifyRef} />
 
           {layoutMobile()}
-          <v-main>
-            <dialogConfirm ref={confirmRef} />
-            <notifyComponent ref={notifyRef} />
+          <v-main class={'ma-4'}>
             <router-view />
           </v-main>
 
