@@ -25,6 +25,9 @@
       ]
     },
   },
+  "files": [
+    "src/components/types/dialogComponent.d.ts",
+  ],
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
