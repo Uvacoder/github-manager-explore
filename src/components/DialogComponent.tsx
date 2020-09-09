@@ -38,7 +38,7 @@ export const DialogComponent = defineComponent({
     const renderActions = (e: ActionsDialog) => {
       return (
         <v-btn
-          color={e.color}
+          class={e.color}
           onClick={() => {
             ctx.emit(e.event)
           }}
