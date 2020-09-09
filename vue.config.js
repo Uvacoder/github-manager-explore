@@ -4,5 +4,6 @@ module.exports = {
   productionSourceMap: process.env.NODE_ENV !== 'production',
   configureWebpack: {
     plugins: []
-  }
+  },
+  publicPath: '/GitHub-Manager-Explore'
 }
