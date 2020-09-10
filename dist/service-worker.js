@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/GitHub-Manager-Explore/precache-manifest.043312e374052799096a8f4a5b7c3991.js"
+  "/github-manager-explore/precache-manifest.890a6e6ade6ab76b337fed908bdf0e5b.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "github-manager-explore"});

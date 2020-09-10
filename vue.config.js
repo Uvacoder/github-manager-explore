@@ -6,5 +6,5 @@ module.exports = {
     plugins: []
   },
   publicPath:
-    process.env.NODE_ENV === 'production' ? '/GitHub-Manager-Explore/' : '/'
+    process.env.NODE_ENV === 'production' ? '/github-manager-explore/' : '/'
 }
