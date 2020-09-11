@@ -1,12 +1,19 @@
-import { shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import CompositionApi from '@vue/composition-api'
+import Vue from 'vue'
+import Vuetify from 'vuetify'
+import { mount } from '@vue/test-utils'
+import { LoadingComponent } from '../../src/components/Loading'
+import { DialogConfirm } from '../../src/components/DialogConfirm'
 
-describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message'
-    const wrapper = shallowMount(HelloWorld, {
-      propsData: { msg }
-    })
-    expect(wrapper.text()).toMatch(msg)
+Vue.use(CompositionApi)
+Vue.use(Vuetify)
+
+describe('Test Unit', () => {
+  it('Render Confirm Component and Open', () => {
+    const wrapper = mount(DialogConfirm)
+    wrapper.vm.confirm('Title Here', 'Subtitle Here', 'green')
+    expect(wrapper.vm.state.title).toBe('Title Here')
+    expect(wrapper.vm.state.subtitle).toBe('Subtitle Here')
+    expect(wrapper.vm.state.color).toBe('headline green')
   })
 })
