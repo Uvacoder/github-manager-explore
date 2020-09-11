@@ -1,6 +1,6 @@
 {
   "name": "github-manager-explore",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "author": {
     "name": "João Medeiros",
@@ -14,7 +14,8 @@
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
     "deploy": "git subtree push --prefix dist origin gh-pages",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "release": "standard-version && git push --tags"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.2",
