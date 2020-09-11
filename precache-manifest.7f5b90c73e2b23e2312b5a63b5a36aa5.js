@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2b73aca19ff3336fc4f4",
+    "revision": "f402722c73931230ecd3",
     "url": "/github-manager-explore/css/chunk-vendors.32038295.css"
   },
   {
@@ -80,16 +80,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/github-manager-explore/img/fa-solid-900.03ba7cb7.svg"
   },
   {
-    "revision": "3f3517063335c6bf9a2ea17a012c8a7f",
+    "revision": "713d0e0933380b2ab4fcdf4dfb936e14",
     "url": "/github-manager-explore/index.html"
   },
   {
-    "revision": "25653728d5febca93387",
-    "url": "/github-manager-explore/js/app.ab8f4e62.js"
+    "revision": "a61009fce83e99f7f0f1",
+    "url": "/github-manager-explore/js/app.5a248511.js"
   },
   {
-    "revision": "2b73aca19ff3336fc4f4",
-    "url": "/github-manager-explore/js/chunk-vendors.be41123a.js"
+    "revision": "f402722c73931230ecd3",
+    "url": "/github-manager-explore/js/chunk-vendors.87a1a426.js"
   },
   {
     "revision": "28fae99dba76ee2b9f389fcd73da0b8c",
