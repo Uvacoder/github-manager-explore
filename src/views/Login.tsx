@@ -1,4 +1,4 @@
-import { defineComponent, reactive, ref, onMounted } from '@vue/composition-api'
+import { defineComponent, reactive, onMounted } from '@vue/composition-api'
 import { useQuery } from '@vue/apollo-composable'
 import gql from 'graphql-tag'
 

@@ -3,15 +3,9 @@ import { defineComponent } from '@vue/composition-api'
 // import { useQuery } from '@vue/apollo-composable'
 
 export const Home = defineComponent({
-  setup(_, { root }) {
+  setup() {
     return () => {
-      return (
-        <div class={'ma-2'}>
-          <v-btn attrs={{ small: true }}>
-            <span>Normal</span>
-          </v-btn>
-        </div>
-      )
+      return <div class={'ma-2'}></div>
     }
   }
 })

@@ -1,11 +1,13 @@
 import { defineComponent } from '@vue/composition-api'
 
 export const Footer = defineComponent({
-  setup(_, { root }) {
+  setup() {
     return () => {
       return (
         <v-footer attrs={{ app: true }}>
-          <span>&copy; {new Date().getFullYear()}</span>
+          <span>
+            &copy; {new Date().getFullYear()} - v{process.env.VERSION}
+          </span>
         </v-footer>
       )
     }

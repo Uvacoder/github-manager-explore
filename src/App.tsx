@@ -71,15 +71,11 @@ export const App = defineComponent({
           <loadingComponent ref={loadingRef} />
           <dialogConfirm ref={confirmRef} />
           <notifyComponent ref={notifyRef} />
-
           {layoutMobile()}
           <v-main class={'ma-4'}>
             <router-view />
           </v-main>
-
-          <v-footer attrs={{ app: true }}>
-            <span>&copy; {new Date().getFullYear()}</span>
-          </v-footer>
+          <footerLayout />
         </v-app>
       )
     }

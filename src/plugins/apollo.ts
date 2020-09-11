@@ -4,7 +4,7 @@ import ApolloClient from 'apollo-client'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { setContext } from 'apollo-link-context'
 
-export function setupApollo(url: string) {
+export function setupApollo(url: string): any {
   const httpLink = createHttpLink({ uri: url, fetch: fetch })
 
   const authLink = setContext((_, { headers }) => {
