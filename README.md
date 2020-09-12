@@ -11,7 +11,7 @@
 ["babel-preset-vca-jsx"](https://github.com/luwanquan/babel-preset-vca-jsx), thank you very much for the developer for that!
 
 ## Features
-[x] Personal Token Login
+[x] Personal Token Login  
 [x] Vulnerability Alerts (list and view)
 
 ## Images
