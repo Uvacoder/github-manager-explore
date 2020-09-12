@@ -4,6 +4,7 @@ import { Home } from '../views/Home'
 import { Login } from '../views/Login'
 import { Profile } from '../plugins/types/interfaces'
 import { VulnerabilityAlerts } from '../views/pages/VulnerabilityAlerts'
+import { Support } from '../views/pages/Support'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,15 @@ const routes: Array<RouteConfig> = [
     path: '/vulnerabilityalerts',
     name: 'Vulnerability Alerts',
     component: VulnerabilityAlerts,
+    meta: {
+      requerAuth: true,
+      title: 'Vulnerability Alerts'
+    }
+  },
+  {
+    path: '/support',
+    name: 'Support',
+    component: Support,
     meta: {
       requerAuth: true,
       title: 'Vulnerability Alerts'

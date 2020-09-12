@@ -47,6 +47,26 @@ export const HeaderMobile = defineComponent({
           />
           <v-toolbar-title>{p.headertitle}</v-toolbar-title>
           <v-spacer></v-spacer>
+          <v-tooltip
+            top
+            scopedSlots={{
+              activator: ({ on }) => {
+                return (
+                  <v-btn
+                    {...{ on }}
+                    icon
+                    href={'https://github.com/joaomede/github-manager-explore'}
+                    target={'_blank'}
+                  >
+                    <v-icon>fab fa-github</v-icon>
+                  </v-btn>
+                )
+              }
+            }}
+          >
+            <span>GitHub Project</span>
+          </v-tooltip>
+
           {root.cProfile.login !== undefined ? (
             <v-tooltip
               top

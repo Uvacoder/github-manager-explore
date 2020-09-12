@@ -94,6 +94,15 @@ export const DrawerMobile = defineComponent({
             ) : (
               ''
             )}
+
+            <v-list-item link to={'/support'}>
+              <v-list-item-action>
+                <v-icon>fas fa-question</v-icon>
+              </v-list-item-action>
+              <v-list-item-content>
+                <v-list-item-title>Support</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
           </v-list>
         </v-navigation-drawer>
       )
