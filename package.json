@@ -14,7 +14,7 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "deploy": "./deploy.sh",
     "commit": "git-cz",
     "release": "standard-version && git push --tags"
   },
