@@ -80,12 +80,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/github-manager-explore/img/fa-solid-900.03ba7cb7.svg"
   },
   {
-    "revision": "a3ad5bbe623f2b247f3c1f99a6ad6db4",
+    "revision": "44aeac5ae742170586a294a29b42ae5e",
     "url": "/github-manager-explore/index.html"
   },
   {
-    "revision": "19c6afb2a49eaa98e8f9",
-    "url": "/github-manager-explore/js/app.1b48a837.js"
+    "revision": "c56b6878f2266ffe4093",
+    "url": "/github-manager-explore/js/app.0b318dab.js"
   },
   {
     "revision": "f402722c73931230ecd3",
