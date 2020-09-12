@@ -1,7 +1,8 @@
 {
   "name": "github-manager-explore",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "private": false,
+  "license": "MIT",
   "author": {
     "name": "João Medeiros",
     "email": "joaoserj@gmail.com",
