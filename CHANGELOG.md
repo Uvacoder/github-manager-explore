@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/joaomede/github-manager-explore/compare/v0.1.1...v1.0.1) (2020-09-12)
+
+
+### Bug Fixes
+
+* 🐛 added home button menu ([62f6bcb](https://github.com/joaomede/github-manager-explore/commit/62f6bcbe94b6f028b9aa49e3a08b0ac5e19bf1fe))
+* 🐛 added new component - button Menu ([ab1bb63](https://github.com/joaomede/github-manager-explore/commit/ab1bb63f334afa77758405bc021167e951eefdaa))
+* 🐛 added new page: Support ([219f531](https://github.com/joaomede/github-manager-explore/commit/219f53127eea270ce74d1c0df924396cb86f0e27))
+
 ### 0.1.1 (2020-09-11)
 
 
