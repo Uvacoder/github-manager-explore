@@ -7,6 +7,7 @@ import { Footer } from '../layout/Footer'
 import { DialogConfirm } from '../components/DialogConfirm'
 import { LoadingComponent } from '../components/Loading'
 import { DialogComponent } from '../components/DialogComponent'
+import { ButtonMenuComponent } from '../components/ButtonMenuComponent'
 
 Vue.use(VueCookies)
 Vue.component('HeaderMobile', HeaderMobile)
@@ -18,3 +19,5 @@ Vue.component('DialogConfirm', DialogConfirm)
 Vue.component('LoadingComponent', LoadingComponent)
 
 Vue.component('DialogComponent', DialogComponent)
+
+Vue.component('ButtonMenu', ButtonMenuComponent)
