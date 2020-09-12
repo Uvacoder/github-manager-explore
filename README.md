@@ -1,7 +1,11 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-
 # Github Manager Explore
+
+<p align="center">
+  <img src="./img/Octocat.png"height="130">
+</p>
+
 
 > ! This project uses the Github GRAPH V4 API to display the information, so a personal access token generated on GitHub is required, ["Tutorial to creating Personal Token"](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
 
