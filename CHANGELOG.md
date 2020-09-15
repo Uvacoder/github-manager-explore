@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/joaomede/github-manager-explore/compare/v1.0.1...v1.1.0) (2020-09-15)
+
+
+### Features
+
+* 🎸 added public only filter (vulnerabilities page) ([f62b4ba](https://github.com/joaomede/github-manager-explore/commit/f62b4ba387d53a2b6e78478ea567105a42cb6519))
+
+
+### Bug Fixes
+
+* 🐛 update 404 handler ([de9446d](https://github.com/joaomede/github-manager-explore/commit/de9446d6c2c657354c049a13ae899cc51377ad92))
+
 ### [1.0.1](https://github.com/joaomede/github-manager-explore/compare/v0.1.1...v1.0.1) (2020-09-12)
 
 
