@@ -23,7 +23,8 @@ export const App = defineComponent({
       title: 'Github Manager Explore ',
       left: false,
       menuDesktop: false,
-      login: null
+      login: null,
+      showUpgradeUI: false
     })
 
     onMounted(() => {
@@ -34,6 +35,20 @@ export const App = defineComponent({
         on: loadingRef.value.on_,
         off: loadingRef.value.off_
       })
+      //
+
+      if (root.$workbox) {
+        root.$workbox.addEventListener('waiting', () => {
+          root
+            .confirm('Update Available', 'Do you want to accept update?')
+            .then(async () => {
+              await root.$workbox.messageSW({ type: 'SKIP_WAITING' })
+            })
+            .catch(() => {
+              //
+            })
+        })
+      }
     })
 
     function logout() {

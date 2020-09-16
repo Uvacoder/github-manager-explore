@@ -1,5 +1,6 @@
 import { Moment } from 'moment'
 import { Profile } from './plugins/types/interfaces'
+import { Workbox } from 'workbox-window'
 
 declare module 'vue/types/vue' {
   interface Vue {
@@ -60,5 +61,7 @@ declare module 'vue/types/vue' {
      * @memberof Vue
      */
     cProfile: Profile
+
+    $workbox: Workbox
   }
 }
