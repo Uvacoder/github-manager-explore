@@ -87,7 +87,7 @@ export const App = defineComponent({
           <dialogConfirm ref={confirmRef} />
           <notifyComponent ref={notifyRef} />
           {layoutMobile()}
-          <v-main class={'ma-4'}>
+          <v-main>
             <router-view />
           </v-main>
           <footerLayout />
