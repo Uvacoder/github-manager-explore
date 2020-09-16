@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/joaomede/github-manager-explore/compare/v1.1.0...v1.2.0) (2020-09-16)
+
+
+### Features
+
+* 🎸 added pwd and dialog to update service work ([354a9a7](https://github.com/joaomede/github-manager-explore/commit/354a9a74fdf6ba019f632484d741b4c1cdd42c9a))
+
 ## [1.1.0](https://github.com/joaomede/github-manager-explore/compare/v1.0.1...v1.1.0) (2020-09-15)
 
 
