@@ -35,5 +35,5 @@
     "tests/**/*.ts",
     "tests/**/*.tsx"
   ],
-  "exclude": ["./**/*.js"]
+  "exclude": ["./**/*.js", "node_modules"]
 }
