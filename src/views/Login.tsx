@@ -1,9 +1,16 @@
-import { defineComponent, reactive, onMounted } from '@vue/composition-api'
+import {
+  defineComponent,
+  reactive,
+  onMounted,
+  getCurrentInstance
+} from '@vue/composition-api'
 import { useQuery } from '@vue/apollo-composable'
 import gql from 'graphql-tag'
 
 export const Login = defineComponent({
-  setup(_, { root }) {
+  setup(_) {
+    const root = (getCurrentInstance()?.root as unknown) as any
+
     const state = reactive({
       token: ''
     })

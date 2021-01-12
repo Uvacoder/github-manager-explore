@@ -1,13 +1,7 @@
-import {
-  defineComponent,
-  onMounted,
-  reactive,
-  watch,
-  computed
-} from '@vue/composition-api'
+import { defineComponent } from '@vue/composition-api'
 
 export const Support = defineComponent({
-  setup(_, { root }) {
+  setup(_) {
     return () => {
       return (
         <v-card height={'100%'}>

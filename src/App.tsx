@@ -9,7 +9,9 @@ import { DefaultApolloClient } from '@vue/apollo-composable'
 import { setupApollo } from './plugins/apollo'
 
 export const App = defineComponent({
-  setup(_, { root }) {
+  setup(_) {
+    const root = getCurrentInstance()?.root as any
+
     const notifyRef = (ref(null) as unknown) as any
     const confirmRef = (ref(null) as unknown) as any
     const loadingRef = (ref(null) as unknown) as any

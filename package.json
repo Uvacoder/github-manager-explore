@@ -21,10 +21,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.2",
     "@mdi/font": "^5.5.55",
-    "@vue/apollo-composable": "^4.0.0-alpha.10",
-    "@vue/composition-api": "^1.0.0-beta.11",
-    "apollo-boost": "^0.4.9",
-    "apollo-link-context": "^1.0.20",
+    "@vue/composition-api": "^1.0.0-beta.25",
     "babel-plugin-vue-jsx-modifier": "^1.1.2",
     "core-js": "^3.6.5",
     "epic-spinners": "^1.1.0",

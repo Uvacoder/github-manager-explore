@@ -1,4 +1,9 @@
-import { defineComponent, computed } from '@vue/composition-api'
+import {
+  defineComponent,
+  computed,
+  getCurrentInstance,
+  ComponentRenderProxy
+} from '@vue/composition-api'
 
 export const HeaderMobile = defineComponent({
   props: {
@@ -11,7 +16,8 @@ export const HeaderMobile = defineComponent({
       default: false
     }
   },
-  setup(p, { emit, root }) {
+  setup(p, { emit }) {
+    const root = (getCurrentInstance()?.root as unknown) as ComponentRenderProxy
     function update(status: boolean) {
       emit('update', status)
     }

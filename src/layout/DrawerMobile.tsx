@@ -1,4 +1,9 @@
-import { defineComponent, computed } from '@vue/composition-api'
+import {
+  defineComponent,
+  computed,
+  getCurrentInstance,
+  ComponentRenderProxy
+} from '@vue/composition-api'
 
 export const DrawerMobile = defineComponent({
   props: {
@@ -11,7 +16,9 @@ export const DrawerMobile = defineComponent({
       default: false
     }
   },
-  setup(p, { emit, root }) {
+  setup(p, { emit }) {
+    const root = getCurrentInstance()?.root as any
+
     function update(status: boolean) {
       emit('update', status)
     }
