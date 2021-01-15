@@ -1,4 +1,4 @@
 module.exports = {
-  presets: ['vca-jsx', '@vue/cli-plugin-babel/preset'],
-  plugins: ['transform-vue-jsx', 'vue-jsx-modifier']
+  presets: ['vca-jsx', '@vue/babel-preset-app'],
+  plugins: ['vue-jsx-modifier']
 }

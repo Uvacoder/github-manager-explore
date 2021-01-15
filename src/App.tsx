@@ -3,14 +3,15 @@ import {
   onMounted,
   ref,
   reactive,
-  provide
+  provide,
+  getCurrentInstance
 } from '@vue/composition-api'
 import { DefaultApolloClient } from '@vue/apollo-composable'
 import { setupApollo } from './plugins/apollo'
 
 export const App = defineComponent({
   setup(_) {
-    const root = getCurrentInstance()?.root as any
+    const root = (getCurrentInstance()?.proxy.$root as unknown) as Vue
 
     const notifyRef = (ref(null) as unknown) as any
     const confirmRef = (ref(null) as unknown) as any
@@ -37,7 +38,6 @@ export const App = defineComponent({
         on: loadingRef.value.on_,
         off: loadingRef.value.off_
       })
-      //
 
       if (root.$workbox) {
         root.$workbox.addEventListener('waiting', () => {

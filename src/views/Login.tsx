@@ -9,7 +9,7 @@ import gql from 'graphql-tag'
 
 export const Login = defineComponent({
   setup(_) {
-    const root = (getCurrentInstance()?.root as unknown) as any
+    const root = (getCurrentInstance()?.proxy.$root as unknown) as Vue
 
     const state = reactive({
       token: ''
